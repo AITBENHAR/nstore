@@ -197,7 +197,7 @@ class SaleOrder(models.Model):
 
     def cron_create_update_sale_order(self):
         # wooc_instance = self.woocomm_instance_id
-        wooc_instance = self.env['woocommerce.instance'].sudo().search([('woocomm_instance_id', '=', 1)])
+        wooc_instance = self.env['woocommerce.instance'].sudo().search([('id', '=', 1)])
 
         self.import_sale_order(wooc_instance, is_force_update=True, from_method='cron')
 
