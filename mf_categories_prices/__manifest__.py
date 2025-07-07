@@ -4,7 +4,9 @@
         MF. Categories Prices,
         """,
     'description': """
-        This module allows users to synchronize their Google Contacts with Odoo. It supports both importing and exporting contacts, ensuring that contact information is consistent between Google Contacts and Odoo.
+        This module allows users to synchronize their Google Contacts with Odoo. 
+        It supports both importing and exporting contacts, ensuring that contact information is consistent 
+        between Google Contacts and Odoo.
     """,
     'author': "MF TECH",
     'license': 'AGPL-3',
