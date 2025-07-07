@@ -157,7 +157,7 @@ class SaleOrder(models.Model):
         limit = 10
         get_next_page = True
         page = 1
-        while page < 1:
+        while page < 2:
             try:
                 params = {'orderby': 'id', 'order': 'desc', 'per_page': limit, 'page': page}
                 orders = woo_api.get(url, params=params)
