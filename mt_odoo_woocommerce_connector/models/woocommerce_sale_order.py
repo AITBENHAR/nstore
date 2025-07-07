@@ -154,10 +154,10 @@ class SaleOrder(models.Model):
         #must_create_orders_json = list(self.env.company.sudo().must_create_orders_json.values()) if self.env.company.sudo().must_create_orders_json else []
         #url = f"orders" + f'?include={",".join(str(order_create) for order_create in must_create_orders_json)}' if must_create_orders_json and from_method != 'cron' else 'orders'
         url = f"orders"
-        limit = 4
+        limit = 10
         get_next_page = True
         page = 1
-        while page < 3:
+        while page < 1:
             try:
                 params = {'orderby': 'id', 'order': 'desc', 'per_page': limit, 'page': page}
                 orders = woo_api.get(url, params=params)
