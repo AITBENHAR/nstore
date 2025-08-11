@@ -157,7 +157,7 @@ class SaleOrder(models.Model):
         limit = 10
         get_next_page = True
         page = 1
-        while page < 2:
+        while page < 10:
             try:
                 params = {'orderby': 'id', 'order': 'desc', 'per_page': limit, 'page': page}
                 orders = woo_api.get(url, params=params)
@@ -179,7 +179,7 @@ class SaleOrder(models.Model):
                 else:
                     get_next_page = False 
             else:
-                    get_next_page = False 
+                get_next_page = False 
                     
     def cron_import_woocomm_orders(self):
         all_instances = self.env['woocommerce.instance'].sudo().search([])
